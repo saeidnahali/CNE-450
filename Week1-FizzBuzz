@@ -1,0 +1,25 @@
+# FizzBuzz Unit Test
+# CNE 450, 09.29.2021
+# Dr. Zak
+# Saeid Nahali
+# Mohammad Pakizehjam,
+# Source https://gist.github.com/jaysonrowe/1592775
+
+class Exam:
+    # This program returns the count of numbers within a range that are divisible by 3 and 5
+    def fizzbuzz(self, startNum, endNum):
+
+        fizz = 0 # Numbers divisible by 3
+        buzz = 0 # Numbers divisible by 5
+        fizzbuzz = 0 # Numbers divisible by 3 and 5
+        while startNum < endNum:
+            if startNum%3 == 0 and startNum%5 == 0:
+                fizzbuzz +=1
+                fizz +=1
+                buzz +=1
+            elif startNum%3 == 0:
+                fizz +=1
+            elif startNum%5 == 0:
+                buzz +=1
+            startNum += 1
+        return [fizz, buzz, fizzbuzz]
